@@ -106,7 +106,7 @@ const UserDataFrom = () => {
         <div className="btn">
              <button className="submitbtn" type="submit" onClick={handleSubmit} >
             Convert
-                <Formula  />
+                <Formula temperature ={temperature} />
              </button>
         </div>          
         </form>
