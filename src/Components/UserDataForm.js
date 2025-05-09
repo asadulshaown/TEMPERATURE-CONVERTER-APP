@@ -1,7 +1,7 @@
 
 
 import { useState } from "react"
-import Formula from "./Formula"
+// import Formula from "./Formula"
 
 
 const UserDataFrom = () => {
@@ -38,28 +38,28 @@ const UserDataFrom = () => {
         }
         else if(userInput === "celcius"){
             // alert(`You Enter ${userInput} '&' ${temperature}`);
-            const C = celcius;
-            const F = (celcius*9/5) + 32 + "F";
-            const K = celcius + 273.15 + "K" 
+            const C = celcius + 'C';
+            const F = parseFloat((celcius*9/5) + 32).toFixed(2) + "F";
+            const K = parseFloat(celcius + 273.15).toFixed(2) + "K" 
 
             alert(`The Temperature in Celcius: ${C}`) 
             alert(`The Temperature in Fahernhite: ${F}`);
             alert(`The Temperature In Kelvin: ${K}`)
         }
         else if(userInput === "farhenhite"){
-            const C =(celcius-32)*5/9;
-            const F =celcius;
-            const K = celcius + 273.15 + "K"
+            const C = parseFloat((celcius-32)*5/9).toFixed(2) + 'C';
+            const F = celcius + 'F';
+            const K = parseFloat(celcius + 273.15).toFixed(2) + "K"
 
             alert(`The Temperature In Celcius: ${C}`)
             alert(`The Temperature In Farhenhite: ${F}`)
             alert(`The Temperature In Kelvin: ${K}`)
         }
         else if(userInput === "kelvin"){
-            const C =(celcius-32)*5/9;
-            const F = (celcius-32)*5/9 + "F";
-            const K = celcius;
-
+            const C =parseFloat((celcius-32)*5/9).toFixed(2)+'C';
+            const F = parseFloat((celcius-32)*5/9).toFixed(2) + "F";
+            const K = celcius +'K';
+            
             alert(`The Temperature In Celcius: ${C}`)
             alert(`The Temperature In Fahernhite: ${F}`)
             alert(`The Temperature In Kelvin: ${K}`)
@@ -106,7 +106,7 @@ const UserDataFrom = () => {
         <div className="btn">
              <button className="submitbtn" type="submit" onClick={handleSubmit} >
             Convert
-                <Formula temperature ={temperature} />
+                {/* <Formula temperature ={temperature} /> */}
              </button>
         </div>          
         </form>
