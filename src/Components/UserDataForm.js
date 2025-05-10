@@ -94,19 +94,23 @@ const UserDataFrom = () => {
          </label>
 
          <select  id="tempName">
-            <option  id="cel">Celcius</option>
+            <option >Celcius</option>
             <option >Farhenhite</option>
             <option >kelvin</option>
          </select>
-         <input className="userInput2" type="text" placeholder="Celcius" onChange={valueChange2}>
+         <input list="datalist" className="userInput2" type="text" placeholder="Celcius" onChange={valueChange2}>
          </input>
-         
+        <datalist id="datalist">
+            <option value="Celcius"></option>
+            <option value="Farhenhite"></option>
+            <option value="kelvin"></option>
+        </datalist>
+            
          </div>
          
         <div className="btn">
              <button className="submitbtn" type="submit" onClick={handleSubmit} >
             Convert
-                {/* <Formula temperature ={temperature} /> */}
              </button>
         </div>          
         </form>
