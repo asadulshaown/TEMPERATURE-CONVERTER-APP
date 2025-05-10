@@ -109,7 +109,7 @@ const UserDataFrom = () => {
          </div>
          
         <div className="btn">
-             <button className="submitbtn" type="submit" onClick={handleSubmit} >
+             <button className="submitbtn" type="submit" onClick={handleSubmit} onReset={handleSubmit}>
             Convert
              </button>
         </div>          
